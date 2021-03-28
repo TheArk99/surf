@@ -1,10 +1,11 @@
 --- surf.c
 +++ surf.c
-@@ -231,6 +231,7 @@ static void togglefullscreen(Client *c, const Arg *a);
- static void togglecookiepolicy(Client *c, const Arg *a);
- static void toggleinspector(Client *c, const Arg *a);
- static void find(Client *c, const Arg *a);
-+static void search(Client *c, const Arg *a);
+@@ -347,6 +354,8 @@ setup(void)
+ 	scriptfile = buildfile(scriptfile);
+ 	cachedir   = buildpath(cachedir);
+ 	certdir    = buildpath(certdir);
++	dlstatus   = buildpath(dlstatus);
++	dldir      = buildpath(dldir);
  
- /* Buttons */
- static void clicknavigate(Client *c, const Arg *a, WebKitHitTestResult *h);
+ 	gdkkb = gdk_seat_get_keyboard(gdk_display_get_default_seat(gdpy));
+ 
